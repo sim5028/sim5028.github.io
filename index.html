@@ -1,25 +1,86 @@
-<!DOCTYPE html>
+<DOCTYPE HTML>
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Page D'accueil</title>
+        <title>Page D'Accueil</title>
         <style>
-            body {background-color:black;}
-            h1 {color:white;
-               text-decorations:underline;}
-            a {color:white;
-              text-decoration:none;}
+            body {background-color: rgb(64, 63, 63);
+            font-size: 20px;
+            height:400px;}
+            #header {
+            float: top;
+            margin: 20px;
+            width: auto;
+            height: 100px;
+            border-radius: 25px;
+            background-color: black;
+            color: white;
+            font-size:3em;
+            font-family: "Monaco", monospace;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 100px;}
+            #poeme {
+            float: left;
+            float: top;
+            margin: 10px;
+            width: 48%;
+            height: 300px;
+            border-radius: 25px;
+            background-image:url(https://poemanalysis.com/wp-content/uploads/2016/01/Stopping-by-Woods-on-a-Snowy-Evening-By-Robert-Frost-Visual-Representation-1.jpg);
+            background-size: 70%;
+            background-position-x:50%;
+            font-family: "Monaco", monospace;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 300px;}
+            #voyage {
+            float: right;
+            float: top;
+            margin: 10px;
+            width: 48%;
+            height: 300px;
+            border-radius: 25px;
+            background-image:url(https://www.anywhere.com/blog/images/Are-Cubas-Beaches-Nice-Vintage.png);
+            background-size:100%;
+            background-position-x:50%;
+            background-position-y:60%;
+            font-family: "Monaco", monospace;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 300px;}
+            #menu {
+            float: left;
+            float: bottom;
+            margin: 10px;
+            width: 48%;
+            height: 300px;
+            border-radius: 25px;
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHOtxjrt5IqNb1dNObBmFcKSxxgDM0x9o37Q&s);
+            background-size: 100%;
+            font-family: "Monaco", monospace;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 300px;}
+            #bio {
+            float: right;
+            float: bottom;
+            margin: 10px;
+            width: 48%;
+            height: 300px;
+            border-radius: 25px;
+            background-color: blue;
+            font-family: "Monaco", monospace;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 300px;}
         </style>
     </head>
-<body>
-    <h1><strong><em>Mes Sites Webs</em></strong></h1>
-    <ul>
-        <li><a target="_blank" href="poeme.html">Poeme - Stopping by Woods on a snowy Evening</a></li>
-        <a target="_blank" href="poeme.html"> <img src="https://poemanalysis.com/wp-content/uploads/2016/01/Stopping-by-Woods-on-a-Snowy-Evening-By-Robert-Frost-Visual-Representation-1.jpg" height="300"></a>
-        <li><a target="_blank" href="voyage.html">Mon Voyage Parfait!</a></li>
-        <a target="_blank" href="voyage.html"> <img src="https://www.anywhere.com/blog/images/Are-Cubas-Beaches-Nice-Vintage.png" height="300"></a>
-        <li><a target="_blank" href="menu.html">5 Meilleurs Jeux Videos</a></li>
-        <a target="_blank" href="menu.html"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHOtxjrt5IqNb1dNObBmFcKSxxgDM0x9o37Q&s" height="300"></a>
-    </ul>
-</body>
+    <body>
+    <div id="header">Mes Sites Webs</div>
+    <div id="poeme"><a href="poeme.html" style="color: white; text-decoration: none; background-color: black;">Poeme - Stopping by Woods on a Snowy Evening</a></div>
+    <div id="voyage"><a href="voyage.html" style="color: white; text-decoration: none; background-color: black;">Mon Voyage Parfait!</a></div>
+    <div id="menu"><a href="menu.html" style="color: white; text-decoration: none; background-color: black;">5 Meilleurs Jeux Videos</a></div>
+    <div id="bio"><a style="color: white; text-decoration: none; background-color: black;">Biographie</a></div>
+    </body>
 </html>
