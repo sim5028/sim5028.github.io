@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+  <meta charset="utf-8">
+  <title>Programme de nom</title>
+</head>
+
+<body>
+  <form>
+    <h1>Programme de nom</h1>
+    
+    <label for="prenom">Prénom :</label>
+    <input type="text" id="prenom">
+    <br><br>
+    
+    <label for="nomDuMilieu">Nom du Milieu :</label>
+    <input type="text" id="nomDuMilieu">
+    <br><br>
+    
+    <label for="nomDeFamille">Nom de Famille :</label>
+    <input type="text" id="nomDeFamille">
+    <br><br>
+
+    <input type="button" onclick= "initiales()"  value="Initiales">
+    <input type="button" onclick= "nomAuComplet()"  value="Nom au complet">
+    <input type="button" onclick= "nomDutilisateur()"  value="Nom d’utilisateur">
+    <div id="affiche"></div>
+    
+    <script>
+        function initiales() {
+            var initiale1 = document.getElementById("prenom").value.charAt(0)
+            var initiale2 = document.getElementById("nomDuMilieu").value.charAt(0)
+            var initiale3 = document.getElementById("nomDeFamille").value.charAt(0)
+            var initiales = initiale1.toUpperCase() + initiale2.toUpperCase() + initiale3.toUpperCase()
+            var message1 = "<br><br>Initiales : " + initiales;
+            affiche.innerHTML = message1;
+        }
+        function nomAuComplet() {
+            var nomAuComplet = document.getElementById("prenom").value + " " + document.getElementById("nomDuMilieu").value + " " + document.getElementById("nomDeFamille").value
+            var message2 = "<br><br>Nom au complet : " + nomAuComplet;
+            affiche.innerHTML = message2;
+        }
+        function nomDutilisateur() {
+            var nomDutilisateur = document.getElementById("prenom").value.charAt(0).toLowerCase() + document.getElementById("nomDuMilieu").value.charAt(0).toLowerCase() + document.getElementById("nomDeFamille").value.toLowerCase()
+            var message3 = "<br><br>Nom d'utilisateur : " + nomDutilisateur;
+            affiche.innerHTML = message3;
+        }
+    </script>
+  </form>
+</body>
+</html>
