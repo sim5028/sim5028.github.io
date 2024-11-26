@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>MadLibs</title>
+</head>
+<body>
+  <form>
+    <h1>MadLibs</h1>
+    <p style = line-height:30px;>J’adore l’été !  Chaque jour, quand je suis en vacances, je me réveille, je mets mes <input type="text" id="txt1"> (vêtements - nom pluriel), je me rend à la cuisine et je mange <input type="text" id="txt2"> (nourriture, avec déterminant) pour déjeuner.  Ensuite, mon activité préféré est de <input type="text" id="txt3"> (action - verbe à l’infinitif) avec mon ami <input type="text" id="txt4"> (nom d’ami).  À 14h, je dîne.  Je mange des <input type="text" id="txt5"> (nourriture - au pluriel) <input type="text" id="txt6"> (adjectif).  Durant l’après-midi, j’aime me rendre au parc et de <input type="text" id="txt7"> (action - verbe à l’infinitif) <input type="text" id="txt8"> (adverbe qui termine en -ment).  En soirée, je mange toujours du <input type="text" id="txt9"> (nourriture) pour le souper.  Finalement, je me couche et je rêve de <input type="text" id="txt10"> (nom).  Quel été <input type="text" id="txt11"> (adjectif) !</p>
+    <input type="button" id="btnSoumet" onclick="afficheMadLibs()"  value="Affiche le MadLibs">
+    <div id="divAffiche">
+    </div>
+<script>
+    function afficheMadLibs() {
+        var message = "J’adore l’été !  Chaque jour, quand je suis en vacances, je me réveille, je mets mes " + document.getElementById("txt1").value + ", je me rend à la cuisine et je mange " + document.getElementById("txt2").value + " pour déjeuner.  Ensuite, mon activité préféré est de " + document.getElementById("txt3").value + " avec mon ami " + document.getElementById("txt4").value + ".  À 14h, je dîne.  Je mange des " + document.getElementById("txt5").value + " " + document.getElementById("txt6").value + ".  Durant l’après-midi, j’aime me rendre au parc et de " + document.getElementById("txt7").value + " " + document.getElementById("txt8").value + ".  En soirée, je mange toujours du " + document.getElementById("txt9").value + " pour le souper.  Finalement, je me couche et je rêve de " + document.getElementById("txt10").value + ".  Quel été " + document.getElementById("txt11").value +  "!"
+        document.getElementById("divAffiche").innerHTML = message
+    }
+</script>
+</form>
+</body>
+</html>
