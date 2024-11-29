@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Changeur de couleur</title>
+</head>
+<body>
+  <!-- Formulaire d'inscription -->
+  <form>
+    <h1>Changeur de couleur</h1>
+
+
+  <!-- select pour le choix de couleur -->
+    <label for="selCouleur">Couleur : </label>
+    <select id="selCouleur">
+      <option value="Vert">Vert</option>
+      <option value="Jaune">Jaune</option>
+      <option value="Violet">Violet</option>
+      <option value="Rouge">Rouge</option>
+    </select>
+    <br><br>
+    <br>
+
+    <!-- bouton pour soumettre le formulaire -->
+    <input type="button" id="btnCouleur" onclick="changeCouleur()"  value="Change la couleur">
+  <!-- Création d'une section pour l'affichage des résultats -->
+    <div id="divAffiche"></div>
+    <script>
+        function changeCouleur() {
+      var colorMap = {
+        Vert: "green",
+        Jaune: "yellow",
+        Violet: "purple",
+        Rouge: "red"
+        };
+      var affiche = document.getElementById("divAffiche");
+      var couleur = document.getElementById("selCouleur").value;
+      var message = "<br><br><hr><br>Tu as choisi la couleur : " + couleur + "<br>";
+      document.getElementById("btnCouleur").style.backgroundColor = colorMap[couleur];
+      var messageCouleur = ""
+      if (couleur == "Vert") {
+          messageCouleur = '<img src="https://www.color-hex.com/palettes/96427.png" width="300"/>'
+      } else if (couleur == "Jaune") {
+          messageCouleur = '<img src="https://www.color-hex.com/palettes/104741.png" width="300"/>'
+      } else if (couleur == "Violet") {
+        messageCouleur = '<img src="https://www.color-hex.com/palettes/93314.png" width="300"/>'
+      } else if (couleur == "Rouge") {
+        messageCouleur = '<img src="https://www.color-hex.com/palettes/82990.png" width="300"/>'
+      }
+      //Afficher le message sur la page web
+            affiche.innerHTML = message + messageCouleur;
+        }
+    </script>
+  </form>
+</body>
+</html>
